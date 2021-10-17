@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    font-family: 'Forum', cursive;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: uppercase;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 3%;
+    background: black;
+}
+.slider {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.slides {
+    width: 100%;
+    height: 500px;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+.text {
+    color: #7298a8;
+    font-size: 2.4vh;
+    padding-top: 2.3%;
+    width: 50%;
+}
+
+.controls {
+    text-align: right;
+    margin-top: 3%;
+    padding-bottom: 15%;
+    position: relative;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #7298a8;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-right: 5px;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.controls p:after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 25px;
+}
+
+.controls p:nth-child(1):after {
+    left: calc(100% - 88px);
+}
+
+.controls p:nth-child(2):after {
+    left: calc(100% - 64px);
+}
+
+.controls p:nth-child(3):after {
+    left: calc(100% - 40px);
+}
+
+.controls p:nth-child(4):after {
+    left: calc(100% - 15px);
+}
+
+.animation {
+    animation-name: animation;
+    animation-duration: 1.5s;
+}
+
+@keyframes animation {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media screen and (max-width: 20em){
+    .controls {
+        text-align: center;
+        padding-top: 7%;
+        padding-bottom: 25%;
+    }
+
+    .text {
+        font-size: 2.5vh;
+        padding-top: 22%;
+        width: 100%;
+    }
+
+    .slides {
+        height: 300px;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .controls p:after {
+        top: 21px;
+    }
+
+    .controls p:nth-child(1):after {
+        left: calc(100% - 188px);
+    }
+
+    .controls p:nth-child(2):after {
+        left: calc(100% - 164px);
+    }
+
+    .controls p:nth-child(3):after {
+        left: calc(100% - 139px);
+    }
+
+    .controls p:nth-child(4):after {
+        left: calc(100% - 115px);
+    }
+}
